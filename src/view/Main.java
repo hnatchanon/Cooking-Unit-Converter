@@ -3,8 +3,16 @@ import net.webservicex.CookingUnit;
 import net.webservicex.CookingUnitSoap;
 
 
-
+/**
+ * Main class of this project.
+ * @author Natchanon Hongladaromp 5510546034
+ *
+ */
 public class Main {
+	/**
+	 * Main method.
+	 * @param args string arguments.
+	 */
 	public static void main(String[] args) {
 		CookingUnit cu = new CookingUnit();
 		CookingUnitSoap soap = cu.getCookingUnitSoap();

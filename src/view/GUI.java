@@ -22,6 +22,11 @@ import net.webservicex.CookingUnit;
 import net.webservicex.CookingUnitSoap;
 import net.webservicex.Cookings;
 
+/**
+ * GUI Class of this project
+ * @author Natchanon Hongladaromp 5510546034
+ *
+ */
 public class GUI extends JFrame implements Runnable {
 	
 	private CookingUnitSoap soap;
@@ -32,12 +37,19 @@ public class GUI extends JFrame implements Runnable {
 	private JTextField field2;
 	private double result;
 	
+	/**
+	 * Constructor for this class.
+	 * @param soap a Cooking Unit SOAP
+	 */
 	public GUI(CookingUnitSoap soap) {
 		this.soap = soap;
 		this.setTitle("Cooking Unit Converter");
 		initComponent();
 	}
 
+	/**
+	 * initialize all component.
+	 */
 	private void initComponent() {
 		JPanel pane = new JPanel(new FlowLayout());
 		
@@ -96,12 +108,11 @@ public class GUI extends JFrame implements Runnable {
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
-	
-	protected void clear() {
-		field1.setText("");
-		field2.setText("");
-	}
 
+	/**
+	 * Convert method.
+	 * @param i type of convert left to right if 1; otherwise is right to left.
+	 */
 	protected void convert(int i) {
 		if(i==1) {
 			String input = field1.getText();
@@ -133,10 +144,21 @@ public class GUI extends JFrame implements Runnable {
 		setVisible(true);
 	}
 	
+	/**
+	 * Class to perform requests a cooking unit conversion,
+	 * so that UI does not block while waiting for web service reply.
+	 * It enables service to fail gracefully.
+	 * @author hnatchanon
+	 *
+	 */
 	class ConvertWorker extends javax.swing.SwingWorker<Double, String> {
 		
 		private int type;
 		
+		/**
+		 * Constructor of this class.
+		 * @param n
+		 */
 		public ConvertWorker (int n) {
 			type = n;
 		}
