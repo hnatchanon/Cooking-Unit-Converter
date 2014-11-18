@@ -14,9 +14,7 @@ public class Main {
 	 * @param args string arguments.
 	 */
 	public static void main(String[] args) {
-		CookingUnit cu = new CookingUnit();
-		CookingUnitSoap soap = cu.getCookingUnitSoap();
-		Runnable gui = new GUI(soap);
+		Runnable gui = new GUI();
 		gui.run();
 	}
 }
