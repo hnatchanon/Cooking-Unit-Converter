@@ -188,7 +188,7 @@ public class GUI extends JFrame implements Runnable {
 			CookingUnit cu = new CookingUnit();
 			soap = cu.getCookingUnitSoap();
 		} catch (WebServiceException e){
-			int respose = JOptionPane.showConfirmDialog(null, "No internet access. Please try again","Error!",
+			int respose = JOptionPane.showConfirmDialog(null, "No internet access. Try again?","Error!",
 					JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
 			if (respose == JOptionPane.YES_OPTION) {
 				createSoap();
@@ -212,7 +212,6 @@ public class GUI extends JFrame implements Runnable {
 	class ConvertWorker extends javax.swing.SwingWorker<Double, String> {
 
 		private int type;
-		private boolean sts = false;
 
 		/**
 		 * Constructor of this class.

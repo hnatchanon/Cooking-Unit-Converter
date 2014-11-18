@@ -1,6 +1,4 @@
 package ku.cooking.view;
-import net.webservicex.CookingUnit;
-import net.webservicex.CookingUnitSoap;
 
 
 /**
