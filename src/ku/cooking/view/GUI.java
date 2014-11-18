@@ -1,4 +1,4 @@
-package view;
+package ku.cooking.view;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -22,7 +22,7 @@ import javax.swing.Timer;
 import javax.swing.text.NumberFormatter;
 import javax.xml.ws.WebServiceException;
 
-import model.CookingUnitDescription;
+import ku.cooking.model.CookingUnitDescription;
 import net.webservicex.CookingUnit;
 import net.webservicex.CookingUnitSoap;
 import net.webservicex.Cookings;
@@ -180,6 +180,9 @@ public class GUI extends JFrame implements Runnable {
 		}
 	}
 
+	/**
+	 * create new soap.
+	 */
 	protected void createSoap() {
 		try{
 			CookingUnit cu = new CookingUnit();

@@ -1,4 +1,4 @@
-package model;
+package ku.cooking.model;
 import net.webservicex.Cookings;
 
 /**
